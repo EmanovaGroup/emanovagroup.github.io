@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emanova Group | Modern Gücün Estetiği</title>
+
+  <style>
+    body {
+      margin:0;
+      font-family: Arial;
+      background:#0f0f10;
+      color:white;
+    }
+
+    header {
+      display:flex;
+      justify-content:space-between;
+      padding:20px 40px;
+      background:#111;
+      position:sticky;
+      top:0;
+    }
+
+    header h1 {
+      font-size:18px;
+      letter-spacing:2px;
+    }
+
+    nav a {
+      color:white;
+      margin-left:20px;
+      text-decoration:none;
+      opacity:0.7;
+    }
+
+    nav a:hover {
+      opacity:1;
+    }
+
+    .hero {
+      height:90vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:radial-gradient(circle,#1a1a1a,#0f0f10);
+    }
+
+    .hero h2 {
+      font-size:48px;
+      margin-bottom:10px;
+    }
+
+    .btn {
+      margin-top:20px;
+      padding:12px 25px;
+      background:#d4af37;
+      color:black;
+      font-weight:bold;
+      text-decoration:none;
+    }
+
+    section {
+      padding:80px 40px;
+      max-width:1000px;
+      margin:auto;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .card {
+      background:#1a1a1a;
+      padding:20px;
+      border-radius:10px;
+      border:1px solid #2a2a2a;
+    }
+
+    footer {
+      text-align:center;
+      padding:30px;
+      background:#111;
+      font-size:12px;
+      opacity:0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>EMANOVA GROUP</h1>
+  <nav>
+    <a href="#about">Hakkımızda</a>
+    <a href="#services">Hizmetler</a>
+    <a href="#projects">Projeler</a>
+    <a href="#contact">İletişim</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Modern Gücün Estetiği</h2>
+  <p>Mühendislik, inşaat ve endüstriyel çözümler</p>
+  <a class="btn" href="#contact">İletişime Geç</a>
+</section>
+
+<section id="about">
+  <h2>Hakkımızda</h2>
+  <p>
+    Emanova Group; mühendislik ve inşaat alanlarında modern, sürdürülebilir ve
+    yüksek standartlı çözümler üretir.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Hizmetler</h2>
+  <div class="grid">
+    <div class="card">Endüstriyel Yapılar</div>
+    <div class="card">Mühendislik Çözümleri</div>
+    <div class="card">Proje Yönetimi</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projeler</h2>
+  <div class="grid">
+    <div class="card">Fabrika Projesi</div>
+    <div class="card">Endüstriyel Tesis</div>
+    <div class="card">Altyapı Çalışması</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>İletişim</h2>
+  <p>info@emanovagroup.com</p>
+  <p>+90 XXX XXX XX XX</p>
+</section>
+
+<footer>
+  © 2026 Emanova Group. Tüm hakları saklıdır.
+</footer>
+
+</body>
+</html>

@@ -1,17 +1,132 @@
+/* ABOUT */
 
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,sans-serif;background:#07111f;color:#fff}
-.navbar{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:24px 50px;background:rgba(0,0,0,.7)}
-.logo{color:#d4af37;font-weight:700;font-size:28px}
-nav a{color:#fff;text-decoration:none;margin-left:20px}
-.hero{height:100vh;display:flex;align-items:center;padding:0 80px;background:linear-gradient(135deg,#06111f,#122742)}
-.hero h1{font-size:72px}
-.btn{display:inline-block;margin-top:20px;padding:14px 28px;background:#d4af37;color:#07111f;text-decoration:none}
-.section{padding:100px 60px}
-.dark{background:#0d1b30}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.card{padding:35px;background:#132844;border:1px solid #d4af37}
-.stats{display:flex;gap:40px;margin-top:25px}
-.stats strong{display:block;color:#d4af37;font-size:42px}
-.cta{text-align:center;padding:100px 20px;background:#0d1b30}
-footer{text-align:center;padding:40px;background:#040914}
+.about-section{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+min-height:850px;
+
+background:#08111f;
+}
+
+.about-left{
+
+padding:120px 90px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+}
+
+.section-tag{
+
+color:#d4af37;
+
+letter-spacing:4px;
+
+font-size:14px;
+
+margin-bottom:25px;
+}
+
+.about-left h2{
+
+font-family:'Cormorant Garamond',serif;
+
+font-size:78px;
+
+line-height:1;
+
+margin-bottom:35px;
+}
+
+.about-left p{
+
+color:#cfcfcf;
+
+line-height:2;
+
+margin-bottom:20px;
+
+font-size:17px;
+}
+
+.about-btn{
+
+display:inline-block;
+
+margin-top:25px;
+
+color:#08111f;
+
+background:#d4af37;
+
+padding:16px 30px;
+
+text-decoration:none;
+
+font-weight:600;
+
+width:max-content;
+}
+
+.about-right{
+
+overflow:hidden;
+}
+
+.about-right img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+}
+
+/* STATS */
+
+.stats-section{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+background:#0d1b30;
+}
+
+.stat-box{
+
+padding:60px 20px;
+
+text-align:center;
+
+border-right:1px solid rgba(212,175,55,.2);
+}
+
+.stat-box:last-child{
+
+border-right:none;
+}
+
+.stat-box h3{
+
+font-size:58px;
+
+color:#d4af37;
+
+margin-bottom:10px;
+}
+
+.stat-box p{
+
+color:#ddd;
+
+font-size:15px;
+
+line-height:1.6;
+}

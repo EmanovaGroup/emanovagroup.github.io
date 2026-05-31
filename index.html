@@ -1,118 +1,69 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Emanova Group</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emanova Group</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <header class="navbar">
-
-    <div class="logo">
-
-        <img src="images/logo.png" alt="Emanova">
-
-        <div class="logo-text">
-
-            <h2>EMANOVA</h2>
-
-            <span>GROUP</span>
-
-        </div>
-
-    </div>
-
-    <nav>
-
-        <a href="#" class="active">Ana Sayfa</a>
-
-        <a href="#">Hakkımızda</a>
-
-        <a href="#">Hizmetler</a>
-
-        <a href="#">Projeler</a>
-
-        <a href="#">İletişim</a>
-
-    </nav>
-
-    <a href="#" class="contact-btn">
-
-        İLETİŞİME GEÇ
-
-        <span>→</span>
-
-    </a>
-
+<div class="logo">EMANOVA GROUP</div>
+<nav>
+<a href="#home">Ana Sayfa</a>
+<a href="#about">Hakkımızda</a>
+<a href="#services">Hizmetler</a>
+<a href="#projects">Projeler</a>
+<a href="#contact">İletişim</a>
+</nav>
 </header>
 
-<section class="hero">
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-content">
-
-        <span class="hero-tag">
-
-            MODERN GÜCÜN ESTETİĞİ
-
-        </span>
-
-        <div class="hero-line"></div>
-
-        <h1>
-
-            Geleceğin
-            <br>
-            Yaşam Alanları
-
-        </h1>
-
-        <p>
-
-            Emanova Group olarak modern yaşam alanları
-            ve yüksek yatırım değeri sunan projeler
-            geliştiriyoruz.
-
-        </p>
-
-        <div class="hero-buttons">
-
-            <a href="#" class="btn-gold">
-
-                PROJELERİMİZ
-
-            </a>
-
-            <a href="#" class="btn-outline">
-
-                İLETİŞİM
-
-            </a>
-
-        </div>
-
-    </div>
-
-    <div class="hero-image">
-
-        <img
-        src="images/hero-building.png"
-        alt="Emanova Residence">
-
-    </div>
-
+<section id="home" class="hero">
+<div class="hero-content">
+<h1>Geleceğin Yaşam Alanları</h1>
+<p>Modern Gücün Estetiği</p>
+<a class="btn" href="#projects">Projelerimiz</a>
+</div>
 </section>
 
-</body>
+<section id="about" class="section">
+<h2>Hakkımızda</h2>
+<p>Emanova Group modern konut ve ticari projeler geliştirir.</p>
+<div class="stats">
+<div><strong>15+</strong><span>Yıllık Tecrübe</span></div>
+<div><strong>35+</strong><span>Tamamlanan Proje</span></div>
+<div><strong>250+</strong><span>Uzman Kadro</span></div>
+</div>
+</section>
 
+<section id="services" class="section dark">
+<h2>Hizmetlerimiz</h2>
+<div class="grid">
+<div class="card">Konut Projeleri</div>
+<div class="card">Ticari Yapılar</div>
+<div class="card">Kentsel Dönüşüm</div>
+<div class="card">Proje Geliştirme</div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<h2>Projelerimiz</h2>
+<div class="grid">
+<div class="card">NovaLife Residence</div>
+<div class="card">Nova Tower</div>
+<div class="card">Nova Park</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Birlikte Geleceği İnşa Edelim</h2>
+<a class="btn" href="#contact">Bize Ulaşın</a>
+</section>
+
+<footer id="contact">
+<p>info@emanovagroup.com</p>
+<p>© Emanova Group</p>
+</footer>
+<script src="script.js"></script>
+</body>
 </html>

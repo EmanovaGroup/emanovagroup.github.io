@@ -7,112 +7,47 @@
 body{
   font-family:'Inter', sans-serif;
   background:#06111f;
-  color:#fff;
+  color:white;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* ================= NAVBAR ================= */
 
 .navbar{
   position:fixed;
   top:0;
   left:0;
   width:100%;
-  padding:25px 60px;
+  padding:20px 50px;
 
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
 
-  background:rgba(0,0,0,0.35);
+  background:rgba(0,0,0,0.4);
   backdrop-filter:blur(10px);
 
   z-index:1000;
 }
 
-.logo-area{
-  display:flex;
-  align-items:center;
-  gap:15px;
-}
-
-.logo-area img{
-  width:45px;
-  height:auto;
-}
-
-.logo-text h2{
-  font-size:18px;
-  letter-spacing:3px;
-}
-
-.logo-text span{
-  font-size:12px;
-  color:#d4af37;
-  letter-spacing:4px;
-}
-
-.menu{
-  display:flex;
-  gap:25px;
-}
-
-.menu a{
-  color:#fff;
-  text-decoration:none;
-  font-size:14px;
-  letter-spacing:1px;
-  transition:0.3s;
-}
-
-.menu a:hover{
-  color:#d4af37;
-}
-
-.menu-btn{
-  padding:12px 20px;
-  background:#d4af37;
-  color:#06111f;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
-}
-
-.menu-btn:hover{
-  transform:translateY(-2px);
-}
-
-/* =========================
-   HERO SECTION (FIXED)
-========================= */
+/* ================= HERO ================= */
 
 .hero{
-  position:relative;
   height:100vh;
 
-  background-image:url("images/luxury-building-night.jpg");
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
+  background: url("./images/luxury-building-night.jpg") center/cover no-repeat;
 
   display:flex;
   align-items:center;
   justify-content:center;
 
-  overflow:hidden;
+  position:relative;
 }
 
 /* overlay */
 .hero-overlay{
   position:absolute;
   inset:0;
-  background:linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.35),
-    rgba(0,0,0,0.80)
-  );
-  z-index:1;
+  background:rgba(0,0,0,0.55);
 }
 
 /* content */
@@ -120,226 +55,14 @@ body{
   position:relative;
   z-index:2;
   text-align:center;
-  max-width:900px;
-}
-
-.hero-subtitle{
-  color:#d4af37;
-  letter-spacing:4px;
-  font-size:14px;
 }
 
 .hero h1{
+  font-size:70px;
   font-family:'Cormorant Garamond', serif;
-  font-size:80px;
-  line-height:1;
-  margin:20px 0;
 }
 
 .hero p{
-  font-size:18px;
+  margin-top:15px;
   color:#ddd;
-  line-height:1.8;
-}
-
-.hero-btn{
-  display:inline-block;
-  margin-top:30px;
-  padding:14px 28px;
-  background:#d4af37;
-  color:#06111f;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
-}
-
-.hero-btn:hover{
-  transform:translateY(-3px);
-}
-
-/* =========================
-   ABOUT SECTION
-========================= */
-
-.about-section{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:850px;
-  background:#08111f;
-}
-
-.about-left{
-  padding:120px 90px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.section-tag{
-  color:#d4af37;
-  letter-spacing:4px;
-  font-size:14px;
-  margin-bottom:25px;
-}
-
-.about-left h2{
-  font-family:'Cormorant Garamond', serif;
-  font-size:70px;
-  line-height:1.1;
-  margin-bottom:35px;
-}
-
-.about-left p{
-  color:#cfcfcf;
-  line-height:2;
-  margin-bottom:20px;
-  font-size:16px;
-}
-
-.about-btn{
-  display:inline-block;
-  margin-top:25px;
-  color:#08111f;
-  background:#d4af37;
-  padding:16px 30px;
-  text-decoration:none;
-  font-weight:600;
-  width:max-content;
-  transition:0.3s;
-}
-
-.about-btn:hover{
-  transform:translateY(-3px);
-}
-
-.about-right img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.stats-section{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  background:#0d1b30;
-}
-
-.stat-box{
-  padding:60px 20px;
-  text-align:center;
-  border-right:1px solid rgba(212,175,55,.2);
-}
-
-.stat-box:last-child{
-  border:none;
-}
-
-.stat-box h3{
-  font-size:54px;
-  color:#d4af37;
-}
-
-.stat-box p{
-  color:#ddd;
-}
-
-/* =========================
-   SERVICES
-========================= */
-
-.services-section{
-  padding:140px 80px;
-  background:#06111f;
-}
-
-.section-header{
-  text-align:center;
-  max-width:800px;
-  margin:0 auto 80px;
-}
-
-.section-header h2{
-  font-family:'Cormorant Garamond', serif;
-  font-size:64px;
-  margin:20px 0;
-}
-
-.section-header p{
-  color:#cfcfcf;
-  line-height:1.8;
-}
-
-.services-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:30px;
-}
-
-.service-card{
-  background:#0d1b30;
-  padding:50px 35px;
-  border:1px solid rgba(212,175,55,.2);
-  transition:0.4s;
-}
-
-.service-card:hover{
-  transform:translateY(-10px);
-  border-color:#d4af37;
-}
-
-.service-number{
-  font-size:46px;
-  color:#d4af37;
-  margin-bottom:20px;
-}
-
-/* =========================
-   PROJECTS
-========================= */
-
-.projects-section{
-  padding:140px 80px;
-  background:#08111f;
-}
-
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-}
-
-.project-card{
-  position:relative;
-  height:600px;
-  overflow:hidden;
-}
-
-.project-card img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:0.5s;
-}
-
-.project-card:hover img{
-  transform:scale(1.08);
-}
-
-.project-overlay{
-  position:absolute;
-  bottom:0;
-  left:0;
-  right:0;
-  padding:30px;
-  background:linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-}
-
-.project-overlay span{
-  color:#d4af37;
-  font-size:13px;
-  letter-spacing:2px;
 }

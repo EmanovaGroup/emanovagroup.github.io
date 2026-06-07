@@ -379,43 +379,62 @@ font-size:42px;
 grid-template-columns:1fr;
 }
 }
+/* =========================
+   PREMIUM CONTACT LAYOUT FIX
+========================= */
+
 .contact-info{
-display:flex;
-justify-content:center;
-gap:60px;
-flex-wrap:wrap;
-margin:40px 0;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin:50px auto;
+max-width:1000px;
 }
 
+/* kart görünümü */
 .phone-item{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(201,161,95,0.15);
+padding:25px 20px;
 text-align:center;
-min-width:200px;
+transition:.3s;
+backdrop-filter:blur(6px);
 }
 
+.phone-item:hover{
+transform:translateY(-6px);
+border-color:#c9a15f;
+background:rgba(201,161,95,0.05);
+}
+
+/* başlık */
 .phone-item span{
 display:block;
-font-size:12px;
+font-size:11px;
 letter-spacing:2px;
 color:#c9a15f;
-margin-bottom:8px;
+margin-bottom:10px;
 text-transform:uppercase;
 }
 
+/* numara */
 .phone-item a{
 display:block;
 color:white;
 text-decoration:none;
-font-size:20px;
+font-size:18px;
 font-weight:600;
 transition:.3s;
 }
 
 .phone-item a:hover{
 color:#c9a15f;
-transform:translateY(-2px);
 }
 
-.contact-btn{
-margin-top:20px;
+/* responsive */
+@media(max-width:900px){
+.contact-info{
+grid-template-columns:1fr;
+max-width:500px;
 }
-
+}

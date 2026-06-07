@@ -379,3 +379,43 @@ font-size:42px;
 grid-template-columns:1fr;
 }
 }
+.contact-info{
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+margin:40px 0;
+}
+
+.phone-item{
+text-align:center;
+min-width:200px;
+}
+
+.phone-item span{
+display:block;
+font-size:12px;
+letter-spacing:2px;
+color:#c9a15f;
+margin-bottom:8px;
+text-transform:uppercase;
+}
+
+.phone-item a{
+display:block;
+color:white;
+text-decoration:none;
+font-size:20px;
+font-weight:600;
+transition:.3s;
+}
+
+.phone-item a:hover{
+color:#c9a15f;
+transform:translateY(-2px);
+}
+
+.contact-btn{
+margin-top:20px;
+}
+

@@ -15,12 +15,23 @@
 
 <body>
 
+<!-- NAVBAR -->
+<header class="navbar">
+<div class="logo">EMANOVA</div>
+
+<nav>
+<a href="#about">Hakkımızda</a>
+<a href="#projects">Projeler</a>
+<a href="#contact">İletişim</a>
+</nav>
+</header>
+
 <!-- HERO -->
 <section class="hero">
 
 <div class="hero-overlay"></div>
 
-<div class="hero-content">
+<div class="hero-content reveal">
 
 <span class="tag">EMANOVA GROUP</span>
 
@@ -42,20 +53,16 @@ yüksek değerli ve sürdürülebilir projeler üretiyoruz.
 </section>
 
 <!-- ABOUT -->
-<section class="about">
+<section class="about" id="about">
 
-<div class="about-left">
+<div class="about-left reveal">
 
 <span class="tag">HAKKIMIZDA</span>
 
-<h2>
-GELECEĞİ<br>
-İNŞA EDİYORUZ
-</h2>
+<h2>GELECEĞİ İNŞA EDİYORUZ</h2>
 
 <p>
-Emanova Group, modern mimariyi ve mühendislik gücünü birleştirerek
-yüksek kalite standartlarında projeler geliştirir.
+Emanova Group, modern mimariyi ve mühendislik gücünü birleştirerek yüksek kalite standartlarında projeler geliştirir.
 </p>
 
 <p>
@@ -64,50 +71,35 @@ Gayrimenkul ve yatırım alanında sürdürülebilir değer üretir.
 
 </div>
 
-<div class="about-right"></div>
+<div class="about-right reveal"></div>
 
 </section>
 
 <!-- STATS -->
-<section class="stats">
+<section class="stats reveal">
 
-<div>
-<h3>15+</h3>
-<p>Yıllık Tecrübe</p>
-</div>
-
-<div>
-<h3>35+</h3>
-<p>Proje</p>
-</div>
-
-<div>
-<h3>250+</h3>
-<p>Müşteri</p>
-</div>
-
-<div>
-<h3>5000+</h3>
-<p>m² Alan</p>
-</div>
+<div><h3>15+</h3><p>Yıllık Tecrübe</p></div>
+<div><h3>35+</h3><p>Proje</p></div>
+<div><h3>250+</h3><p>Müşteri</p></div>
+<div><h3>5000+</h3><p>m² Alan</p></div>
 
 </section>
 
 <!-- PROJECTS -->
 <section class="projects" id="projects">
 
-<div class="section-title">
+<div class="section-title reveal">
 <h2>PROJELER</h2>
 </div>
 
 <div class="grid">
 
-<div class="card">
+<div class="card reveal">
 <img src="images/luxury-building-night.jpg">
 <h3>Nova Residence</h3>
 </div>
 
-<div class="card">
+<div class="card reveal">
 <img src="images/modern-building.jpg">
 <h3>Nova Towers</h3>
 </div>
@@ -116,27 +108,19 @@ Gayrimenkul ve yatırım alanında sürdürülebilir değer üretir.
 
 </section>
 
+<!-- CONTACT -->
+<section class="contact reveal" id="contact">
+
+<h2>İLETİŞİM</h2>
+<p>Projeleriniz için bizimle iletişime geçin.</p>
+
+<a class="btn" href="mailto:info@emanovagroup.com">Mail Gönder</a>
+
+</section>
+
 <!-- FOOTER -->
 <footer class="footer">
-
-<div class="footer-content">
-
-<h3>Emanova Group</h3>
-
-<p>Modern gücün estetiği ile geleceği inşa ediyoruz.</p>
-
-<div class="footer-links">
-<a href="#projects">Projeler</a>
-<a href="#">Hakkımızda</a>
-<a href="#">İletişim</a>
-</div>
-
-<span class="copyright">
-© 2026 Emanova Group. Tüm hakları saklıdır.
-</span>
-
-</div>
-
+<p>© 2026 Emanova Group</p>
 </footer>
 
 <!-- SCROLL TOP -->
@@ -145,17 +129,26 @@ Gayrimenkul ve yatırım alanında sürdürülebilir değer üretir.
 <script>
 const topBtn = document.getElementById("topBtn");
 
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-};
+window.addEventListener("scroll", () => {
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
 
-topBtn.onclick = function () {
+topBtn.onclick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 };
+
+/* SCROLL REVEAL */
+const observer = new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("active");
+}
+});
+},{threshold:0.15});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+observer.observe(el);
+});
 </script>
 
 </body>

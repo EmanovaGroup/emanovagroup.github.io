@@ -38,32 +38,6 @@ letter-spacing:2px;
 font-size:12px;
 }
 
-.hero h1{
-font-family:'Cormorant Garamond',serif;
-font-size:90px;
-line-height:1;
-margin:20px 0;
-}
-
-.hero h1 span{
-color:#c9a15f;
-}
-
-.hero p{
-opacity:.8;
-margin-bottom:30px;
-max-width:500px;
-}
-
-.btn{
-display:inline-block;
-padding:12px 28px;
-background:#c9a15f;
-color:#000;
-text-decoration:none;
-font-weight:600;
-}
-
 /* ABOUT */
 
 .about{
@@ -72,6 +46,7 @@ grid-template-columns:1fr 1fr;
 min-height:700px;
 }
 
+/* SOL TARAF */
 .about-left{
 padding:120px;
 display:flex;
@@ -81,13 +56,22 @@ justify-content:center;
 
 .about-left h2{
 font-size:60px;
-margin:20px 0;
 font-family:'Cormorant Garamond',serif;
+margin:20px 0;
 }
 
+/* SAĞ TARAF = GELECEĞİ İNŞA EDİYORUZ ARKASI */
 .about-right{
 background:url("images/modern-building.jpg") center/cover no-repeat;
+position:relative;
 min-height:700px;
+}
+
+.about-right::after{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.25);
 }
 
 /* STATS */
@@ -103,7 +87,6 @@ padding:60px;
 .stats h3{
 font-size:42px;
 color:#c9a15f;
-margin-bottom:10px;
 }
 
 /* PROJECTS */
@@ -128,8 +111,4 @@ gap:30px;
 width:100%;
 height:320px;
 object-fit:cover;
-}
-
-.card h3{
-margin-top:10px;
 }

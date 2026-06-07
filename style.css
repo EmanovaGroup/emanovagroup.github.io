@@ -234,20 +234,55 @@ font-size:20px;
 
 /* ================= CONTACT ================= */
 
+/* ================= CONTACT ================= */
+
 .contact{
-padding:120px 40px;
+padding:140px 40px;
 text-align:center;
+background:#0b1a2b;
+position:relative;
+overflow:hidden;
+}
+
+.contact::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(
+circle at center,
+rgba(201,161,95,0.08),
+transparent 70%
+);
+}
+
+.contact *{
+position:relative;
+z-index:2;
 }
 
 .contact h2{
-font-size:56px;
 font-family:'Cormorant Garamond',serif;
-margin-bottom:15px;
+font-size:82px;
+line-height:0.95;
+margin:25px 0;
 }
 
 .contact p{
-margin-bottom:30px;
+max-width:700px;
+margin:auto;
 opacity:.8;
+margin-bottom:40px;
+}
+
+.contact-btn{
+font-size:15px;
+letter-spacing:1px;
+padding:16px 40px;
+}
+
+.contact-btn:hover{
+transform:translateY(-4px);
 }
 
 /* ================= FOOTER ================= */

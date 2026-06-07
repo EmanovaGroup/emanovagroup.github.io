@@ -244,3 +244,30 @@ transform:translateY(0);
 
 .hero-content{padding:100px 20px;}
 }
+
+/* =========================
+   ABOUT TEXT BACKGROUND (SECOND LAYER)
+   GELECEĞİ İNŞA EDİYORUZ EXTRA EFFECT
+========================= */
+
+.about-left{
+position:relative;
+z-index:1;
+}
+
+/* mevcut pseudo-layer varsa onun üstüne ikinci soft layer */
+.about-left::after{
+content:"";
+position:absolute;
+inset:0;
+background:url("images/modern-building-day.jpg") center/cover no-repeat;
+opacity:0.08;
+z-index:0;
+mix-blend-mode:overlay;
+}
+
+/* yazılar tamamen üstte kalsın */
+.about-left *{
+position:relative;
+z-index:2;
+}

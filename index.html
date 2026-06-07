@@ -116,5 +116,47 @@ Gayrimenkul ve yatırım alanında sürdürülebilir değer üretir.
 
 </section>
 
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-content">
+
+<h3>Emanova Group</h3>
+
+<p>Modern gücün estetiği ile geleceği inşa ediyoruz.</p>
+
+<div class="footer-links">
+<a href="#projects">Projeler</a>
+<a href="#">Hakkımızda</a>
+<a href="#">İletişim</a>
+</div>
+
+<span class="copyright">
+© 2026 Emanova Group. Tüm hakları saklıdır.
+</span>
+
+</div>
+
+</footer>
+
+<!-- SCROLL TOP -->
+<button id="topBtn">↑</button>
+
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+    if (document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+};
+
+topBtn.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+</script>
+
 </body>
 </html>

@@ -12,52 +12,69 @@ body{
 font-family:'Inter',sans-serif;
 background:#08111f;
 color:white;
-line-height:1.6;
+overflow-x:hidden;
 }
 
-/* =========================
-   HERO
-========================= */
+/* ================= NAVBAR ================= */
+
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+z-index:999;
+background:rgba(5,11,20,0.6);
+backdrop-filter:blur(10px);
+}
+
+.navbar .logo{
+font-weight:600;
+letter-spacing:3px;
+color:#c9a15f;
+}
+
+.navbar nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-size:14px;
+transition:.3s;
+}
+
+.navbar nav a:hover{
+color:#c9a15f;
+}
+
+/* ================= HERO ================= */
 
 .hero{
 height:100vh;
-background:url("images/luxury-building-night.jpg") center/cover no-repeat;
-position:relative;
+background:url("images/luxury-building-night.jpg") center/cover fixed no-repeat;
 display:flex;
 align-items:center;
+position:relative;
 }
 
 .hero-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35));
+background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.3));
 }
 
 .hero-content{
 position:relative;
-padding:120px;
+padding:140px 80px;
 max-width:800px;
-}
-
-.tag{
-color:#c9a15f;
-letter-spacing:2px;
-font-size:12px;
-display:inline-block;
-transition:.3s;
-}
-
-.tag:hover{
-color:#fff;
-text-shadow:0 0 10px rgba(201,161,95,.5);
 }
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:92px;
+font-size:96px;
 line-height:1;
 margin:20px 0;
-animation:fadeUp 1.2s ease;
 }
 
 .hero h1 span{
@@ -67,12 +84,7 @@ color:#c9a15f;
 .hero p{
 opacity:.8;
 margin-bottom:30px;
-max-width:520px;
-}
-
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
+max-width:500px;
 }
 
 .btn{
@@ -82,17 +94,14 @@ background:#c9a15f;
 color:#000;
 text-decoration:none;
 font-weight:600;
-transition:.3s ease;
+transition:.3s;
 }
 
 .btn:hover{
 transform:translateY(-3px);
-box-shadow:0 10px 25px rgba(201,161,95,.35);
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ================= ABOUT ================= */
 
 .about{
 display:grid;
@@ -102,77 +111,38 @@ min-height:700px;
 
 .about-left{
 padding:120px;
-display:flex;
-flex-direction:column;
-justify-content:center;
 position:relative;
-overflow:hidden;
-}
-
-.about-left::before{
-content:"";
-position:absolute;
-inset:0;
-background:url("images/modern-building-day.jpg") center/cover no-repeat;
-opacity:0.12;
-z-index:0;
-}
-
-.about-left *{
-position:relative;
-z-index:1;
 }
 
 .about-left h2{
-font-size:62px;
+font-size:60px;
 font-family:'Cormorant Garamond',serif;
 margin:20px 0;
-text-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .about-right{
 background:url("images/modern-building.jpg") center/cover no-repeat;
-transition:transform .6s ease;
-min-height:700px;
 }
 
-.about-right:hover{
-transform:scale(1.02);
-}
-
-/* =========================
-   STATS
-========================= */
+/* ================= STATS ================= */
 
 .stats{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 background:#0b1a2b;
 text-align:center;
-padding:70px 60px;
-gap:20px;
-}
-
-.stats div{
-transition:.3s;
-}
-
-.stats div:hover{
-transform:translateY(-5px);
+padding:80px 40px;
 }
 
 .stats h3{
 font-size:44px;
 color:#c9a15f;
-margin-bottom:10px;
 }
 
-/* =========================
-   PROJECTS
-========================= */
+/* ================= PROJECTS ================= */
 
 .projects{
-padding:120px 100px;
+padding:120px 80px;
 }
 
 .section-title h2{
@@ -188,118 +158,82 @@ gap:30px;
 }
 
 .card{
-position:relative;
-cursor:pointer;
-transition:.4s ease;
 overflow:hidden;
-}
-
-.card:hover{
-transform:translateY(-10px);
+transition:.4s;
+cursor:pointer;
 }
 
 .card img{
 width:100%;
-height:340px;
+height:350px;
 object-fit:cover;
-transition:.5s ease;
+transition:.5s;
 }
 
 .card:hover img{
 transform:scale(1.05);
 }
 
-.card h3{
-margin-top:12px;
-font-size:18px;
+/* ================= CONTACT ================= */
+
+.contact{
+padding:120px;
+text-align:center;
 }
 
-.card::after{
-content:"";
-position:absolute;
-inset:0;
-border:1px solid transparent;
-transition:.4s ease;
+.contact h2{
+font-size:48px;
+font-family:'Cormorant Garamond',serif;
 }
 
-.card:hover::after{
-border-color:#c9a15f;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* ================= FOOTER ================= */
 
 .footer{
-background:#050b14;
-padding:70px 40px;
 text-align:center;
-margin-top:80px;
+padding:40px;
+background:#050b14;
 }
 
-.footer h3{
-font-size:28px;
-font-family:'Cormorant Garamond',serif;
-margin-bottom:10px;
-}
-
-.footer p{
-opacity:.7;
-margin-bottom:20px;
-}
-
-.footer-links a{
-color:#c9a15f;
-margin:0 12px;
-text-decoration:none;
-font-size:14px;
-transition:.3s;
-}
-
-.footer-links a:hover{
-color:#fff;
-}
-
-/* =========================
-   SCROLL TOP
-========================= */
+/* ================= SCROLL TOP ================= */
 
 #topBtn{
 position:fixed;
-bottom:25px;
-right:25px;
+bottom:30px;
+right:30px;
 width:45px;
 height:45px;
-border:none;
 background:#c9a15f;
-color:#000;
-font-size:18px;
-cursor:pointer;
+border:none;
 display:none;
-transition:.3s;
+cursor:pointer;
 }
 
-#topBtn:hover{
-transform:translateY(-3px);
-box-shadow:0 10px 20px rgba(0,0,0,0.3);
+/* ================= REVEAL ANIMATION ================= */
+
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:1s ease;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
 
 @media(max-width:992px){
 
-.hero-content{padding:60px;}
 .hero h1{font-size:64px;}
 
 .about{grid-template-columns:1fr;}
 
-.stats{grid-template-columns:1fr 1fr;}
-
 .grid{grid-template-columns:1fr;}
 
-.projects{padding:80px 40px;}
+.stats{grid-template-columns:1fr 1fr;}
+
+.navbar{padding:15px 20px;}
 }
 
 @media(max-width:600px){
@@ -308,5 +242,5 @@ box-shadow:0 10px 20px rgba(0,0,0,0.3);
 
 .stats{grid-template-columns:1fr;}
 
-.hero-content{padding:30px;}
+.hero-content{padding:100px 20px;}
 }

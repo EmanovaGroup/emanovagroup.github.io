@@ -12,67 +12,44 @@ body{
 font-family:'Inter',sans-serif;
 background:#08111f;
 color:white;
+line-height:1.6;
 overflow-x:hidden;
 }
 
-/* ================= NAVBAR ================= */
-
-.navbar{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-z-index:999;
-background:rgba(5,11,20,0.6);
-backdrop-filter:blur(10px);
-}
-
-.navbar .logo{
-font-weight:600;
-letter-spacing:3px;
-color:#c9a15f;
-}
-
-.navbar nav a{
-color:white;
-margin-left:20px;
-text-decoration:none;
-font-size:14px;
-transition:.3s;
-}
-
-.navbar nav a:hover{
-color:#c9a15f;
-}
-
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero{
 height:100vh;
-background:url("images/luxury-building-night.jpg") center/cover fixed no-repeat;
+background:url("images/luxury-building-night.jpg") center/cover no-repeat;
+position:relative;
 display:flex;
 align-items:center;
-position:relative;
 }
 
 .hero-overlay{
 position:absolute;
 inset:0;
-background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.3));
+background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35));
 }
 
 .hero-content{
 position:relative;
-padding:140px 80px;
+padding:120px;
 max-width:800px;
+}
+
+.tag{
+color:#c9a15f;
+letter-spacing:2px;
+font-size:12px;
+display:inline-block;
 }
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:96px;
+font-size:92px;
 line-height:1;
 margin:20px 0;
 }
@@ -84,7 +61,7 @@ color:#c9a15f;
 .hero p{
 opacity:.8;
 margin-bottom:30px;
-max-width:500px;
+max-width:520px;
 }
 
 .btn{
@@ -101,7 +78,9 @@ transition:.3s;
 transform:translateY(-3px);
 }
 
-/* ================= ABOUT ================= */
+/* =========================
+   ABOUT (FIXED SPLIT DESIGN)
+========================= */
 
 .about{
 display:grid;
@@ -109,22 +88,46 @@ grid-template-columns:1fr 1fr;
 min-height:700px;
 }
 
+/* SOL KISIM - MAVİ KART */
 .about-left{
+background:#0b1a2b;
 padding:120px;
+display:flex;
+flex-direction:column;
+justify-content:center;
 position:relative;
 }
 
 .about-left h2{
-font-size:60px;
+font-size:62px;
 font-family:'Cormorant Garamond',serif;
 margin:20px 0;
 }
 
-.about-right{
-background:url("images/modern-building.jpg") center/cover no-repeat;
+.about-left p{
+opacity:.8;
+max-width:500px;
+margin-bottom:10px;
 }
 
-/* ================= STATS ================= */
+/* SAĞ KISIM - GÖRSEL */
+.about-right{
+background:url("images/modern-building-day.jpg") center/cover no-repeat;
+min-height:700px;
+position:relative;
+}
+
+/* hafif cinematic geçiş */
+.about-right::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(90deg, rgba(11,26,43,0.25), transparent);
+}
+
+/* =========================
+   STATS
+========================= */
 
 .stats{
 display:grid;
@@ -139,7 +142,9 @@ font-size:44px;
 color:#c9a15f;
 }
 
-/* ================= PROJECTS ================= */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects{
 padding:120px 80px;
@@ -159,8 +164,8 @@ gap:30px;
 
 .card{
 overflow:hidden;
-transition:.4s;
 cursor:pointer;
+transition:.4s;
 }
 
 .card img{
@@ -174,27 +179,20 @@ transition:.5s;
 transform:scale(1.05);
 }
 
-/* ================= CONTACT ================= */
-
-.contact{
-padding:120px;
-text-align:center;
-}
-
-.contact h2{
-font-size:48px;
-font-family:'Cormorant Garamond',serif;
-}
-
-/* ================= FOOTER ================= */
+/* =========================
+   FOOTER
+========================= */
 
 .footer{
 text-align:center;
 padding:40px;
 background:#050b14;
+margin-top:60px;
 }
 
-/* ================= SCROLL TOP ================= */
+/* =========================
+   SCROLL TOP
+========================= */
 
 #topBtn{
 position:fixed;
@@ -208,71 +206,36 @@ display:none;
 cursor:pointer;
 }
 
-/* ================= REVEAL ANIMATION ================= */
-
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:1s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media(max-width:992px){
 
 .hero h1{font-size:64px;}
 
-.about{grid-template-columns:1fr;}
+.about{
+grid-template-columns:1fr;
+}
 
-.grid{grid-template-columns:1fr;}
+.grid{
+grid-template-columns:1fr;
+}
 
-.stats{grid-template-columns:1fr 1fr;}
-
-.navbar{padding:15px 20px;}
+.stats{
+grid-template-columns:1fr 1fr;
+}
 }
 
 @media(max-width:600px){
 
 .hero h1{font-size:42px;}
 
-.stats{grid-template-columns:1fr;}
-
-.hero-content{padding:100px 20px;}
+.hero-content{
+padding:80px 20px;
 }
 
-
-.about-left{
-position:relative;
-overflow:hidden;
+.stats{
+grid-template-columns:1fr;
 }
-
-/* ana mavi zemin üstüne kontrollü image layer */
-.about-left::before{
-content:"";
-position:absolute;
-inset:0;
-background:url("images/modern-building-day.jpg") center/cover no-repeat;
-opacity:0.25; /* ARTIRILDI → görünürlük */
-z-index:0;
-filter:contrast(1.1) brightness(0.9);
-}
-
-/* mavi overlay'i daha kontrollü yapıyoruz */
-.about-left::after{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(120deg, rgba(8,17,31,0.65), rgba(8,17,31,0.35));
-z-index:1;
-}
-
-/* yazılar en üstte */
-.about-left *{
-position:relative;
-z-index:2;
 }

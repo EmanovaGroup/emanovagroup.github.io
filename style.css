@@ -438,3 +438,77 @@ grid-template-columns:1fr;
 max-width:500px;
 }
 }
+/* =========================
+   CORPORATE SECTION
+========================= */
+
+.corporate-section{
+    max-width:1200px;
+    margin:120px auto;
+    padding:0 40px;
+}
+
+.corporate-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(212,175,55,0.15);
+    padding:50px;
+    margin-bottom:35px;
+    border-radius:18px;
+    backdrop-filter:blur(10px);
+    transition:.4s;
+}
+
+.corporate-card:hover{
+    transform:translateY(-6px);
+    border-color:#d4af37;
+}
+
+.corporate-card h2{
+    color:#d4af37;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.corporate-card p{
+    color:#cfcfcf;
+    line-height:1.9;
+    font-size:17px;
+}
+
+/* Dropdown */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+    position:absolute;
+    top:100%;
+    left:0;
+    background:#08111f;
+    min-width:220px;
+    border:1px solid rgba(212,175,55,.2);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    padding:10px 0;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible;
+}
+
+.dropdown-menu li{
+    list-style:none;
+}
+
+.dropdown-menu a{
+    display:block;
+    padding:12px 20px;
+    color:white;
+}
+
+.dropdown-menu a:hover{
+    color:#d4af37;
+}

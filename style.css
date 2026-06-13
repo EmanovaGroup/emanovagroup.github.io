@@ -16,7 +16,7 @@ overflow-x:hidden;
 line-height:1.7;
 }
 
-/* NAVBAR */
+/* NAVBAR (FIXED + STABLE) */
 .navbar{
 position:fixed;
 top:0;
@@ -45,14 +45,66 @@ letter-spacing:4px;
 color:#c9a15f;
 }
 
-.navbar nav a{
+/* MENU FIX (İLETİŞİM BOZULMASI ÇÖZÜLDÜ) */
+.menu{
+display:flex;
+align-items:center;
+gap:25px;
+}
+
+/* DROPDOWN */
+.dropdown{
+position:relative;
+}
+
+.dropbtn{
 color:white;
 text-decoration:none;
-margin-left:25px;
 transition:.3s;
 }
 
-.navbar nav a:hover{
+.dropbtn:hover{
+color:#c9a15f;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+top:35px;
+left:0;
+background:rgba(8,17,31,0.95);
+backdrop-filter:blur(12px);
+min-width:180px;
+border:1px solid rgba(201,161,95,0.15);
+z-index:999;
+}
+
+.dropdown-content a{
+display:block;
+padding:12px 15px;
+color:white;
+text-decoration:none;
+transition:.3s;
+font-size:14px;
+}
+
+.dropdown-content a:hover{
+background:rgba(201,161,95,0.1);
+color:#c9a15f;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* NAV LINKS */
+.menu a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.menu a:hover{
 color:#c9a15f;
 }
 
@@ -136,39 +188,8 @@ padding:100px 80px;
 background:linear-gradient(90deg,rgba(8,17,31,.96),rgba(8,17,31,.55));
 }
 
-.about-left h2{
-font-family:'Cormorant Garamond',serif;
-font-size:64px;
-}
-
 .about-right{
 background:url("images/modern-building-day.jpg") center/cover no-repeat;
-}
-
-/* CORPORATE LINKS */
-.corporate-links{
-display:flex;
-gap:15px;
-margin-top:30px;
-flex-wrap:wrap;
-}
-
-.corp-card{
-flex:1;
-min-width:140px;
-padding:18px;
-text-align:center;
-border:1px solid rgba(201,161,95,0.25);
-text-decoration:none;
-color:white;
-background:rgba(255,255,255,0.03);
-transition:.3s;
-}
-
-.corp-card:hover{
-transform:translateY(-6px);
-border-color:#c9a15f;
-color:#c9a15f;
 }
 
 /* STATS */
@@ -190,11 +211,6 @@ color:#c9a15f;
 padding:120px 80px;
 }
 
-.section-title h2{
-font-size:56px;
-font-family:'Cormorant Garamond',serif;
-}
-
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -203,8 +219,8 @@ gap:35px;
 
 .card{
 overflow:hidden;
-transition:.4s;
 border-radius:14px;
+transition:.4s;
 }
 
 .card:hover{
@@ -228,6 +244,25 @@ transform:scale(1.05);
 padding:140px 40px;
 text-align:center;
 background:#0b1a2b;
+}
+
+.contact-info{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.phone-item{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(201,161,95,0.15);
+padding:25px;
+transition:.3s;
+}
+
+.phone-item:hover{
+transform:translateY(-6px);
+border-color:#c9a15f;
 }
 
 /* FOOTER */
@@ -268,4 +303,5 @@ transform:translateY(0);
 .about{grid-template-columns:1fr;}
 .stats{grid-template-columns:1fr 1fr;}
 .grid{grid-template-columns:1fr;}
+.menu{gap:15px;}
 }

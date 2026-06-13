@@ -20,13 +20,11 @@
 <div class="logo">EMANOVA</div>
 
 <nav>
-<a href="#about">Hakkımızda</a>
+<a href="kurumsal.html">Kurumsal</a>
 <a href="#projects">Projeler</a>
 <a href="#contact">İletişim</a>
 </nav>
 </header>
-
-
 
 <!-- HERO -->
 <section class="hero">
@@ -59,7 +57,7 @@ yüksek değerli ve sürdürülebilir projeler üretiyoruz.
 
 <div class="about-left reveal">
 
-<span class="tag">HAKKIMIZDA</span>
+<span class="tag">KURUMSAL</span>
 
 <h2>GELECEĞİ İNŞA EDİYORUZ</h2>
 
@@ -150,6 +148,7 @@ Projeleriniz ve iş birlikleri için bizimle iletişime geçin.
 </a>
 
 </section>
+
 <!-- FOOTER -->
 <footer class="footer">
 <p>© 2026 Emanova Group</p>
@@ -169,7 +168,7 @@ topBtn.onclick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
-/* SCROLL REVEAL */
+/* REVEAL */
 const observer = new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -180,6 +179,12 @@ entry.target.classList.add("active");
 
 document.querySelectorAll(".reveal").forEach(el=>{
 observer.observe(el);
+});
+
+/* NAV SCROLL EFFECT */
+window.addEventListener("scroll", () => {
+  document.querySelector(".navbar")
+    .classList.toggle("scrolled", window.scrollY > 80);
 });
 </script>
 

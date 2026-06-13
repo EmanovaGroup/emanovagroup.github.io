@@ -1,477 +1,50 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family:'Inter',sans-serif;
-background:#08111f;
-color:white;
-overflow-x:hidden;
-line-height:1.7;
-}
-
-/* ================= NAVBAR ================= */
+/* ================= PREMIUM NAVBAR SCROLL ================= */
 
 .navbar{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 60px;
-z-index:999;
-background:rgba(8,17,31,0.75);
-backdrop-filter:blur(10px);
+transition:.4s ease;
 }
 
-.logo{
-font-size:20px;
-font-weight:600;
-letter-spacing:4px;
-color:#c9a15f;
+.navbar.scrolled{
+padding:15px 60px;
+background:rgba(8,17,31,0.92);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(201,161,95,0.12);
 }
 
-.navbar nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-transition:.3s;
-}
+/* ================= HERO DEPTH LIGHT ================= */
 
-.navbar nav a:hover{
-color:#c9a15f;
-}
-
-/* ================= HERO ================= */
-
-.hero{
-height:100vh;
-background:url("images/luxury-building-night.jpg") center center/cover no-repeat;
-position:relative;
-display:flex;
-align-items:center;
-}
-
-.hero-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(
-90deg,
-rgba(0,0,0,.88),
-rgba(0,0,0,.45)
-);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-padding:120px 80px;
-max-width:800px;
-}
-
-.tag{
-color:#c9a15f;
-letter-spacing:3px;
-font-size:12px;
-}
-
-.hero h1{
-font-family:'Cormorant Garamond',serif;
-font-size:92px;
-line-height:.95;
-margin:20px 0;
-}
-
-.hero h1 span{
-color:#c9a15f;
-}
-
-.hero p{
-max-width:520px;
-opacity:.85;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 32px;
-background:#c9a15f;
-color:#000;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-/* ================= ABOUT ================= */
-
-.about{
-display:grid;
-grid-template-columns:1fr 1fr;
-min-height:750px;
-}
-
-/* SOL TARAF */
-
-.about-left{
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding:100px 80px;
-position:relative;
-background:
-linear-gradient(
-90deg,
-rgba(8,17,31,.96),
-rgba(8,17,31,.82),
-rgba(8,17,31,.55)
-);
-}
-
-.about-left h2{
-font-family:'Cormorant Garamond',serif;
-font-size:64px;
-line-height:1.05;
-margin:20px 0;
-}
-
-.about-left p{
-max-width:520px;
-opacity:.85;
-}
-
-/* SAĞ TARAF - SENİN YÜKLEDİĞİN GÖRSEL */
-
-.about-right{
-background:url("images/modern-building-day.jpg") center center/cover no-repeat;
-position:relative;
-}
-
-/* geçiş efekti */
-
-.about-right::before{
+.hero::after{
 content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(
-to right,
-rgba(8,17,31,.65),
-rgba(8,17,31,.15),
-transparent
-);
+background:
+radial-gradient(circle at 20% 30%, rgba(201,161,95,0.08), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(255,255,255,0.04), transparent 45%);
+mix-blend-mode:overlay;
 }
 
-/* ================= STATS ================= */
+/* ================= PREMIUM BUTTON ================= */
 
-.stats{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-padding:80px 40px;
-background:#0b1a2b;
-text-align:center;
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(201,161,95,0.25);
 }
 
-.stats h3{
-font-size:48px;
-color:#c9a15f;
-margin-bottom:10px;
-}
-
-/* ================= PROJECTS ================= */
-
-.projects{
-padding:120px 80px;
-}
-
-.section-title h2{
-font-size:56px;
-font-family:'Cormorant Garamond',serif;
-margin-bottom:50px;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:35px;
-}
+/* ================= PROJECT CARD SHADOW ================= */
 
 .card{
-cursor:pointer;
-overflow:hidden;
-transition:.4s;
+border-radius:14px;
 }
 
 .card:hover{
-transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-.card img{
-width:100%;
-height:380px;
-object-fit:cover;
-transition:.5s;
-}
+/* ================= RESPONSIVE TYPO FIX ================= */
 
-.card:hover img{
-transform:scale(1.05);
-}
-
-.card h3{
-margin-top:12px;
-font-size:20px;
-}
-
-/* ================= CONTACT ================= */
-
-/* ================= CONTACT ================= */
-
-.contact{
-padding:140px 40px;
-text-align:center;
-background:#0b1a2b;
-position:relative;
-overflow:hidden;
-}
-
-.contact::before{
-content:"";
-position:absolute;
-inset:0;
-background:
-radial-gradient(
-circle at center,
-rgba(201,161,95,0.08),
-transparent 70%
-);
-}
-
-.contact *{
-position:relative;
-z-index:2;
-}
-
-.contact h2{
-font-family:'Cormorant Garamond',serif;
-font-size:82px;
-line-height:0.95;
-margin:25px 0;
-}
-
-.contact p{
-max-width:700px;
-margin:auto;
-opacity:.8;
-margin-bottom:40px;
-}
-
-.contact-btn{
-font-size:15px;
-letter-spacing:1px;
-padding:16px 40px;
-}
-
-.contact-btn:hover{
-transform:translateY(-4px);
-}
-
-/* ================= FOOTER ================= */
-
-.footer{
-padding:40px;
-text-align:center;
-background:#050b14;
-}
-
-/* ================= SCROLL TOP ================= */
-
-#topBtn{
-position:fixed;
-bottom:25px;
-right:25px;
-width:50px;
-height:50px;
-border:none;
-background:#c9a15f;
-color:black;
-font-size:20px;
-cursor:pointer;
-display:none;
-z-index:999;
-}
-
-/* ================= REVEAL ================= */
-
-.reveal{
-opacity:0;
-transform:translateY(40px);
-transition:1s ease;
-}
-
-.reveal.active{
-opacity:1;
-transform:translateY(0);
-}
-
-/* ================= MOBILE ================= */
-
-@media(max-width:992px){
-
-.navbar{
-padding:20px;
-}
-
-.hero-content{
-padding:100px 30px;
-}
-
+@media(max-width:1200px){
 .hero h1{
-font-size:62px;
+font-size:72px;
 }
-
-.about{
-grid-template-columns:1fr;
-}
-
-.about-left{
-padding:80px 30px;
-}
-
-.about-right{
-min-height:450px;
-}
-
-.stats{
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.grid{
-grid-template-columns:1fr;
-}
-
-.projects{
-padding:80px 30px;
-}
-}
-
-@media(max-width:600px){
-
-.hero h1{
-font-size:44px;
-}
-
-.about-left h2{
-font-size:42px;
-}
-
-.stats{
-grid-template-columns:1fr;
-}
-}
-/* =========================
-   PREMIUM CONTACT LAYOUT FIX
-========================= */
-
-.contact-info{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-margin:50px auto;
-max-width:1000px;
-}
-
-/* kart görünümü */
-.phone-item{
-background:rgba(255,255,255,0.03);
-border:1px solid rgba(201,161,95,0.15);
-padding:25px 20px;
-text-align:center;
-transition:.3s;
-backdrop-filter:blur(6px);
-}
-
-.phone-item:hover{
-transform:translateY(-6px);
-border-color:#c9a15f;
-background:rgba(201,161,95,0.05);
-}
-
-/* başlık */
-.phone-item span{
-display:block;
-font-size:11px;
-letter-spacing:2px;
-color:#c9a15f;
-margin-bottom:10px;
-text-transform:uppercase;
-}
-
-/* numara */
-.phone-item a{
-display:block;
-color:white;
-text-decoration:none;
-font-size:18px;
-font-weight:600;
-transition:.3s;
-}
-
-.phone-item a:hover{
-color:#c9a15f;
-}
-
-/* responsive */
-@media(max-width:900px){
-.contact-info{
-grid-template-columns:1fr;
-max-width:500px;
-}
-}
-/* =========================
-   CORPORATE SECTION
-========================= */
-
-.corporate-section{
-    max-width:1200px;
-    margin:120px auto;
-    padding:0 40px;
-}
-
-.corporate-card{
-    background:rgba(255,255,255,0.03);
-    border:1px solid rgba(212,175,55,0.15);
-    padding:50px;
-    margin-bottom:35px;
-    border-radius:18px;
-    backdrop-filter:blur(10px);
-    transition:.4s;
-}
-
-.corporate-card:hover{
-    transform:translateY(-6px);
-    border-color:#d4af37;
-}
-
-.corporate-card h2{
-    color:#d4af37;
-    font-size:32px;
-    margin-bottom:20px;
-}
-
-.corporate-card p{
-    color:#cfcfcf;
-    line-height:1.9;
-    font-size:17px;
 }
 

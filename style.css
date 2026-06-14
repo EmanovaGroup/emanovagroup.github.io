@@ -402,3 +402,24 @@ font-size:52px;
 }
 
 }
+.page{
+padding:140px 80px;
+max-width:900px;
+margin:auto;
+color:white;
+}
+
+.page h1{
+font-family:'Cormorant Garamond',serif;
+font-size:64px;
+color:#c9a15f;
+margin-bottom:30px;
+letter-spacing:2px;
+}
+
+.page p{
+font-size:17px;
+line-height:1.9;
+margin-bottom:20px;
+opacity:0.9;
+}

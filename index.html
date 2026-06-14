@@ -15,7 +15,28 @@
 
 <body>
 
-<div id="navbar"></div>
+<header class="navbar">
+
+  <div class="logo">EMANOVA</div>
+
+  <nav class="menu">
+
+    <div class="dropdown">
+      <a href="#" class="dropbtn">Kurumsal ▾</a>
+
+      <div class="dropdown-content">
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="misyon.html">Misyon</a>
+        <a href="vizyon.html">Vizyon</a>
+      </div>
+    </div>
+
+    <a href="#projects">Projeler</a>
+    <a href="#contact">İletişim</a>
+
+  </nav>
+
+</header>
 
 <!-- HERO -->
 <section class="hero">
@@ -26,9 +47,15 @@
 
     <span class="tag">EMANOVA GROUP</span>
 
-    <h1>MODERN<br>GÜCÜN<br><span>ESTETİĞİ</span></h1>
+    <h1>
+      MODERN<br>
+      GÜCÜN<br>
+      <span>ESTETİĞİ</span>
+    </h1>
 
-    <p>Geleceğin yaşam alanlarını tasarlıyor, yüksek değerli projeler üretiyoruz.</p>
+    <p>
+      Geleceğin yaşam alanlarını tasarlıyoruz.
+    </p>
 
     <a href="#projects" class="btn">PROJELERİ İNCELE</a>
 
@@ -36,7 +63,7 @@
 
 </section>
 
-<!-- ABOUT PREVIEW -->
+<!-- ABOUT -->
 <section class="about">
 
   <div class="about-left">
@@ -46,11 +73,8 @@
     <h2>GELECEĞİ İNŞA EDİYORUZ</h2>
 
     <p>
-      Emanova Group modern mimari ve mühendislik gücünü birleştirerek
-      sürdürülebilir yaşam alanları üretir.
+      Emanova Group modern mimari ve mühendislik gücünü birleştirir.
     </p>
-
-    <a href="hakkimizda.html" class="btn">DAHA FAZLA</a>
 
   </div>
 
@@ -61,10 +85,10 @@
 <!-- STATS -->
 <section class="stats">
 
-  <div><h3>10+</h3><p>Yıl Tecrübe</p></div>
+  <div><h3>10+</h3><p>Yıl</p></div>
   <div><h3>5+</h3><p>Proje</p></div>
   <div><h3>50+</h3><p>Müşteri</p></div>
-  <div><h3>1000+</h3><p>m² Alan</p></div>
+  <div><h3>1000+</h3><p>m²</p></div>
 
 </section>
 
@@ -79,7 +103,7 @@
 
     <div class="card">
       <img src="images/luxury-building-night.jpg">
-      <h3>Şemikler Residence</h3>
+      <h3>Şemikler</h3>
     </div>
 
     <div class="card">
@@ -124,12 +148,6 @@
 <footer class="footer">
   <p>© 2026 Emanova Group</p>
 </footer>
-
-<script>
-fetch("navbar.html")
-  .then(r => r.text())
-  .then(d => document.getElementById("navbar").innerHTML = d);
-</script>
 
 </body>
 </html>

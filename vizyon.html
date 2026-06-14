@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Vizyon | Emanova Group</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="logo">EMANOVA</div>
-</header>
+<div id="navbar"></div>
 
 <section class="page">
 
-  <h1>VİZYON</h1>
+<h1>VİZYON</h1>
 
-  <p>
-    Emanova Group’un vizyonu; Türkiye’de ve uluslararası arenada
-    modern mimarinin öncüsü olan, güvenilir ve prestijli bir marka olmaktır.
-  </p>
+<p>
+Türkiye’de ve dünyada modern mimarinin öncüsü olmak.
+</p>
 
-  <p>
-    Geleceğin şehirlerini şekillendiren, teknoloji ve tasarımı birleştiren
-    global ölçekte bir gayrimenkul ve yatırım markası olmayı hedefleriz.
-  </p>
+<p>
+Global ölçekte güvenilir bir marka haline gelmek.
+</p>
 
-  <p>
-    Sürdürülebilirlik, inovasyon ve estetik değerler üzerine kurulu bir yapı ile
-    sektör standartlarını yeniden tanımlamak en büyük amacımızdır.
-  </p>
+<a href="index.html" class="back-home">← Anasayfaya Dön</a>
 
 </section>
+
+<script>
+fetch("navbar.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("navbar").innerHTML = d);
+</script>
 
 </body>
 </html>

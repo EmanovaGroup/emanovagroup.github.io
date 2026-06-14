@@ -240,29 +240,114 @@ transform:scale(1.05);
 }
 
 /* CONTACT */
+/* ================= CONTACT ================= */
+
 .contact{
 padding:140px 40px;
 text-align:center;
 background:#0b1a2b;
+position:relative;
+overflow:hidden;
+}
+
+.contact::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(
+circle at center,
+rgba(201,161,95,0.08),
+transparent 70%
+);
+}
+
+.contact *{
+position:relative;
+z-index:2;
+}
+
+.contact h2{
+font-family:'Cormorant Garamond',serif;
+font-size:82px;
+line-height:0.95;
+margin:25px 0;
+}
+
+.contact p{
+max-width:700px;
+margin:auto;
+opacity:.8;
+margin-bottom:50px;
 }
 
 .contact-info{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:25px;
-margin-top:40px;
+margin:50px auto;
+max-width:1000px;
 }
 
 .phone-item{
 background:rgba(255,255,255,0.03);
 border:1px solid rgba(201,161,95,0.15);
-padding:25px;
+padding:25px 20px;
+text-align:center;
 transition:.3s;
+backdrop-filter:blur(6px);
 }
 
 .phone-item:hover{
 transform:translateY(-6px);
 border-color:#c9a15f;
+background:rgba(201,161,95,0.05);
+}
+
+.phone-item span{
+display:block;
+font-size:11px;
+letter-spacing:2px;
+color:#c9a15f;
+margin-bottom:10px;
+text-transform:uppercase;
+}
+
+.phone-item a{
+display:block;
+color:white;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+transition:.3s;
+}
+
+.phone-item a:hover{
+color:#c9a15f;
+}
+
+.contact-btn{
+font-size:15px;
+letter-spacing:1px;
+padding:16px 40px;
+margin-top:20px;
+}
+
+.contact-btn:hover{
+transform:translateY(-4px);
+}
+
+@media(max-width:900px){
+
+.contact-info{
+grid-template-columns:1fr;
+max-width:500px;
+}
+
+.contact h2{
+font-size:52px;
+}
+
 }
 
 /* FOOTER */

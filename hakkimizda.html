@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Hakkımızda | Emanova Group</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="logo">EMANOVA</div>
-</header>
+<div id="navbar"></div>
 
 <section class="page">
 
-  <h1>HAKKIMIZDA</h1>
+<h1>HAKKIMIZDA</h1>
 
-  <p>
-    Emanova Group; modern mimari, mühendislik ve yatırım vizyonunu bir araya getirerek
-    yüksek standartlarda yaşam alanları geliştiren bir kurumsal yapı olarak faaliyet göstermektedir.
-  </p>
+<p>
+Emanova Group modern mimari, mühendislik ve yatırım vizyonunu bir araya getirir.
+</p>
 
-  <p>
-    Kuruluşumuzdan bu yana temel hedefimiz; sadece yapılar inşa etmek değil,
-    aynı zamanda uzun vadeli değer üreten, sürdürülebilir ve estetik yaşam alanları oluşturmaktır.
-  </p>
+<p>
+Amacımız sadece yapı inşa etmek değil, sürdürülebilir değer üretmektir.
+</p>
 
-  <p>
-    Her projede kalite, güven ve tasarım mükemmelliğini ön planda tutarak,
-    gayrimenkul sektörüne yenilikçi bir bakış açısı kazandırıyoruz.
-  </p>
+<p>
+Her projede kalite, güven ve estetik ön plandadır.
+</p>
+
+<a href="index.html" class="back-home">← Anasayfaya Dön</a>
 
 </section>
+
+<script>
+fetch("navbar.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("navbar").innerHTML = d);
+</script>
 
 </body>
 </html>

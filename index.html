@@ -15,20 +15,42 @@
 
 <body>
 
+<!-- NAVBAR -->
 <header class="navbar">
 
   <div class="logo">EMANOVA</div>
 
   <nav class="menu">
 
+    <!-- MEGA MENU -->
     <div class="dropdown">
+
       <a href="#" class="dropbtn">Kurumsal ▾</a>
 
-      <div class="dropdown-content">
-        <a href="hakkimizda.html">Hakkımızda</a>
-        <a href="misyon.html">Misyon</a>
-        <a href="vizyon.html">Vizyon</a>
+      <div class="mega-menu">
+
+        <div class="mega-column">
+          <h4>Kurumsal</h4>
+          <a href="hakkimizda.html">Hakkımızda</a>
+          <a href="misyon.html">Misyon</a>
+          <a href="vizyon.html">Vizyon</a>
+        </div>
+
+        <div class="mega-column">
+          <h4>Projeler</h4>
+          <a href="#projects">Tüm Projeler</a>
+          <a href="#">Devam Eden</a>
+          <a href="#">Tamamlanan</a>
+        </div>
+
+        <div class="mega-column">
+          <h4>İletişim</h4>
+          <a href="#contact">İletişim</a>
+          <a href="mailto:bilgi@emanovagroup.com">E-Mail</a>
+        </div>
+
       </div>
+
     </div>
 
     <a href="#projects">Projeler</a>
@@ -43,7 +65,7 @@
 
   <div class="hero-overlay"></div>
 
-  <div class="hero-content">
+  <div class="hero-content reveal">
 
     <span class="tag">EMANOVA GROUP</span>
 
@@ -54,10 +76,10 @@
     </h1>
 
     <p>
-      Geleceğin yaşam alanlarını tasarlıyoruz.
+      Geleceğin yaşam alanlarını tasarlıyor, yüksek değerli ve sürdürülebilir projeler üretiyoruz.
     </p>
 
-    <a href="#projects" class="btn">PROJELERİ İNCELE</a>
+    <a href="#projects" class="btn">PROJELERİ İNCELE →</a>
 
   </div>
 
@@ -66,29 +88,33 @@
 <!-- ABOUT -->
 <section class="about">
 
-  <div class="about-left">
+  <div class="about-left reveal">
 
     <span class="tag">KURUMSAL</span>
 
     <h2>GELECEĞİ İNŞA EDİYORUZ</h2>
 
     <p>
-      Emanova Group modern mimari ve mühendislik gücünü birleştirir.
+      Emanova Group modern mimari ve mühendislik gücünü birleştirerek yüksek kalite standartlarında projeler geliştirir.
+    </p>
+
+    <p>
+      Gayrimenkul ve yatırım alanında sürdürülebilir değer üretir.
     </p>
 
   </div>
 
-  <div class="about-right"></div>
+  <div class="about-right reveal"></div>
 
 </section>
 
 <!-- STATS -->
 <section class="stats">
 
-  <div><h3>10+</h3><p>Yıl</p></div>
+  <div><h3>10+</h3><p>Yıllık Tecrübe</p></div>
   <div><h3>5+</h3><p>Proje</p></div>
   <div><h3>50+</h3><p>Müşteri</p></div>
-  <div><h3>1000+</h3><p>m²</p></div>
+  <div><h3>1000+</h3><p>m² Alan</p></div>
 
 </section>
 
@@ -108,7 +134,7 @@
 
     <div class="card">
       <img src="images/modern-building.jpg">
-      <h3>NovaLife</h3>
+      <h3>NovaLife Bakırlı</h3>
     </div>
 
   </div>
@@ -118,16 +144,18 @@
 <!-- CONTACT -->
 <section class="contact" id="contact">
 
-  <span class="tag">İLETİŞİM</span>
+  <span class="tag">EMANOVA GROUP</span>
 
   <h2>BİRLİKTE GÜÇLÜ YARINLARA</h2>
 
-  <p>Projeleriniz için bizimle iletişime geçin.</p>
+  <p>
+    Geleceğin yaşam alanlarını birlikte tasarlayalım.
+  </p>
 
   <div class="contact-info">
 
     <div class="phone-item">
-      <span>Genel</span>
+      <span>Genel İletişim</span>
       <a href="tel:+905325271814">+90 532 527 18 14</a>
     </div>
 
@@ -143,11 +171,50 @@
 
   </div>
 
+  <a class="btn contact-btn" href="mailto:bilgi@emanovagroup.com">
+    İLETİŞİME GEÇ →
+  </a>
+
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <p>© 2026 Emanova Group</p>
 </footer>
+
+<!-- TOP BUTTON -->
+<button id="topBtn">↑</button>
+
+<script>
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+  topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+});
+
+topBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+/* REVEAL */
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+    }
+  });
+},{threshold:0.15});
+
+document.querySelectorAll(".reveal").forEach(el=>{
+  observer.observe(el);
+});
+
+/* NAV SCROLL */
+window.addEventListener("scroll", () => {
+  document.querySelector(".navbar")
+    .classList.toggle("scrolled", window.scrollY > 80);
+});
+</script>
 
 </body>
 </html>

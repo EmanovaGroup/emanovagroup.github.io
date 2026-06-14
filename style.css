@@ -45,7 +45,7 @@ letter-spacing:4px;
 color:#c9a15f;
 }
 
-/* MENU FIX (İLETİŞİM BOZULMASI ÇÖZÜLDÜ) */
+/* MENU */
 .menu{
 display:flex;
 align-items:center;
@@ -178,18 +178,35 @@ box-shadow:0 10px 25px rgba(201,161,95,0.25);
 display:grid;
 grid-template-columns:1fr 1fr;
 min-height:750px;
+align-items:center;
 }
 
 .about-left{
 display:flex;
 flex-direction:column;
 justify-content:center;
-padding:100px 80px;
+padding:90px 70px;
 background:linear-gradient(90deg,rgba(8,17,31,.96),rgba(8,17,31,.55));
+}
+
+.about-left h2{
+font-family:'Cormorant Garamond', serif;
+font-size:64px;
+line-height:1.05;
+letter-spacing:1px;
+margin-bottom:20px;
+}
+
+.about-left p{
+font-size:16px;
+line-height:1.8;
+max-width:520px;
+opacity:0.85;
 }
 
 .about-right{
 background:url("images/modern-building-day.jpg") center/cover no-repeat;
+filter:contrast(1.05) brightness(0.95);
 }
 
 /* STATS */
@@ -240,8 +257,6 @@ transform:scale(1.05);
 }
 
 /* CONTACT */
-/* ================= CONTACT ================= */
-
 .contact{
 padding:140px 40px;
 text-align:center;
@@ -254,12 +269,7 @@ overflow:hidden;
 content:"";
 position:absolute;
 inset:0;
-background:
-radial-gradient(
-circle at center,
-rgba(201,161,95,0.08),
-transparent 70%
-);
+background:radial-gradient(circle at center, rgba(201,161,95,0.08), transparent 70%);
 }
 
 .contact *{
@@ -337,19 +347,6 @@ margin-top:20px;
 transform:translateY(-4px);
 }
 
-@media(max-width:900px){
-
-.contact-info{
-grid-template-columns:1fr;
-max-width:500px;
-}
-
-.contact h2{
-font-size:52px;
-}
-
-}
-
 /* FOOTER */
 .footer{
 padding:40px;
@@ -384,9 +381,32 @@ transform:translateY(0);
 
 /* RESPONSIVE */
 @media(max-width:992px){
+
 .hero h1{font-size:62px;}
+
 .about{grid-template-columns:1fr;}
+
+.about-left{
+padding:70px 30px;
+}
+
+.about-left h2{
+font-size:42px;
+}
+
 .stats{grid-template-columns:1fr 1fr;}
+
 .grid{grid-template-columns:1fr;}
+
 .menu{gap:15px;}
+
+.contact-info{
+grid-template-columns:1fr;
+max-width:500px;
+}
+
+.contact h2{
+font-size:52px;
+}
+
 }

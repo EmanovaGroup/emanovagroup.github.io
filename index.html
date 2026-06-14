@@ -15,84 +15,53 @@
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-
-  <div class="logo">EMANOVA</div>
-
-  <nav class="menu">
-
-    <!-- DROPDOWN -->
-    <div class="dropdown">
-      <a href="#" class="dropbtn">Kurumsal ▾</a>
-
-      <div class="dropdown-content">
-        <a href="hakkimizda.html">Hakkımızda</a>
-        <a href="misyon.html">Misyon</a>
-        <a href="vizyon.html">Vizyon</a>
-      </div>
-    </div>
-
-    <a href="#projects">Projeler</a>
-    <a href="#contact">İletişim</a>
-
-  </nav>
-
-</header>
+<div id="navbar"></div>
 
 <!-- HERO -->
 <section class="hero">
 
   <div class="hero-overlay"></div>
 
-  <div class="hero-content reveal">
+  <div class="hero-content">
 
     <span class="tag">EMANOVA GROUP</span>
 
-    <h1>
-      MODERN<br>
-      GÜCÜN<br>
-      <span>ESTETİĞİ</span>
-    </h1>
+    <h1>MODERN<br>GÜCÜN<br><span>ESTETİĞİ</span></h1>
 
-    <p>
-      Geleceğin yaşam alanlarını tasarlıyor,
-      yüksek değerli ve sürdürülebilir projeler üretiyoruz.
-    </p>
+    <p>Geleceğin yaşam alanlarını tasarlıyor, yüksek değerli projeler üretiyoruz.</p>
 
-    <a href="#projects" class="btn">PROJELERİ İNCELE →</a>
+    <a href="#projects" class="btn">PROJELERİ İNCELE</a>
 
   </div>
 
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
+<!-- ABOUT PREVIEW -->
+<section class="about">
 
-  <div class="about-left reveal">
+  <div class="about-left">
 
     <span class="tag">KURUMSAL</span>
 
     <h2>GELECEĞİ İNŞA EDİYORUZ</h2>
 
     <p>
-      Emanova Group modern mimari ve mühendislik gücünü birleştirerek yüksek kalite standartlarında projeler geliştirir.
+      Emanova Group modern mimari ve mühendislik gücünü birleştirerek
+      sürdürülebilir yaşam alanları üretir.
     </p>
 
-    <p>
-      Gayrimenkul ve yatırım alanında sürdürülebilir değer üretir.
-    </p>
+    <a href="hakkimizda.html" class="btn">DAHA FAZLA</a>
 
   </div>
 
-  <div class="about-right reveal"></div>
+  <div class="about-right"></div>
 
 </section>
 
 <!-- STATS -->
-<section class="stats reveal">
+<section class="stats">
 
-  <div><h3>10+</h3><p>Yıllık Tecrübe</p></div>
+  <div><h3>10+</h3><p>Yıl Tecrübe</p></div>
   <div><h3>5+</h3><p>Proje</p></div>
   <div><h3>50+</h3><p>Müşteri</p></div>
   <div><h3>1000+</h3><p>m² Alan</p></div>
@@ -102,20 +71,20 @@
 <!-- PROJECTS -->
 <section class="projects" id="projects">
 
-  <div class="section-title reveal">
+  <div class="section-title">
     <h2>PROJELER</h2>
   </div>
 
   <div class="grid">
 
-    <div class="card reveal">
+    <div class="card">
       <img src="images/luxury-building-night.jpg">
-      <h3>Şemikler</h3>
+      <h3>Şemikler Residence</h3>
     </div>
 
-    <div class="card reveal">
+    <div class="card">
       <img src="images/modern-building.jpg">
-      <h3>NovaLife Bakırlı</h3>
+      <h3>NovaLife</h3>
     </div>
 
   </div>
@@ -123,82 +92,43 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact reveal" id="contact">
+<section class="contact" id="contact">
 
-  <span class="tag">EMANOVA GROUP</span>
+  <span class="tag">İLETİŞİM</span>
 
-  <h2>
-    BİRLİKTE<br>
-    GÜÇLÜ<br>
-    YARINLARA
-  </h2>
+  <h2>BİRLİKTE GÜÇLÜ YARINLARA</h2>
 
-  <p>
-    Geleceğin yaşam alanlarını birlikte tasarlayalım. Projeleriniz ve iş birlikleriniz için bizimle iletişime geçin.
-  </p>
+  <p>Projeleriniz için bizimle iletişime geçin.</p>
 
   <div class="contact-info">
 
     <div class="phone-item">
-      <span>Genel İletişim</span>
+      <span>Genel</span>
       <a href="tel:+905325271814">+90 532 527 18 14</a>
     </div>
 
     <div class="phone-item">
-      <span>Yatırım & Projeler</span>
+      <span>Yatırım</span>
       <a href="tel:+905058002344">+90 505 800 23 44</a>
     </div>
 
     <div class="phone-item">
-      <span>Satış & Bilgi</span>
+      <span>Satış</span>
       <a href="tel:+905376545601">+90 537 654 56 01</a>
     </div>
 
   </div>
 
-  <a class="btn contact-btn" href="mailto:bilgi@emanovagroup.com">
-    İLETİŞİME GEÇ →
-  </a>
-
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <p>© 2026 Emanova Group</p>
 </footer>
 
-<!-- SCROLL TOP -->
-<button id="topBtn">↑</button>
-
 <script>
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", () => {
-  topBtn.style.display = window.scrollY > 300 ? "block" : "none";
-});
-
-topBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
-/* REVEAL */
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("active");
-    }
-  });
-},{threshold:0.15});
-
-document.querySelectorAll(".reveal").forEach(el=>{
-  observer.observe(el);
-});
-
-/* NAV SCROLL */
-window.addEventListener("scroll", () => {
-  document.querySelector(".navbar")
-    .classList.toggle("scrolled", window.scrollY > 80);
-});
+fetch("navbar.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("navbar").innerHTML = d);
 </script>
 
 </body>

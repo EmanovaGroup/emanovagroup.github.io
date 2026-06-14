@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Misyon | Emanova Group</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header class="navbar">
-  <div class="logo">EMANOVA</div>
-</header>
+<div id="navbar"></div>
 
 <section class="page">
 
-  <h1>MİSYON</h1>
+<h1>MİSYON</h1>
 
-  <p>
-    Emanova Group olarak misyonumuz; modern şehir yaşamına uygun,
-    güvenli, estetik ve sürdürülebilir yapılar inşa ederek insanların yaşam kalitesini artırmaktır.
-  </p>
+<p>
+Güvenli, estetik ve sürdürülebilir yaşam alanları üretmek.
+</p>
 
-  <p>
-    Her projede mühendislik doğruluğu ile tasarım estetiğini birleştirerek
-    kullanıcı odaklı çözümler üretmeyi hedefleriz.
-  </p>
+<p>
+Mühendislik ve tasarımı en yüksek standartta birleştirmek.
+</p>
 
-  <p>
-    Yatırımcılarımız ve müşterilerimiz için uzun vadeli güven ve değer oluşturmak
-    temel sorumluluğumuzdur.
-  </p>
+<a href="index.html" class="back-home">← Anasayfaya Dön</a>
 
 </section>
+
+<script>
+fetch("navbar.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("navbar").innerHTML = d);
+</script>
 
 </body>
 </html>

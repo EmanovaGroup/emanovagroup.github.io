@@ -67,7 +67,6 @@ transition:.3s;
 color:#c9a15f;
 }
 
-/* FIX: Z-INDEX + POSITION */
 .dropdown-content{
 display:none;
 position:absolute;
@@ -109,22 +108,62 @@ transition:.3s;
 color:#c9a15f;
 }
 
-/* HERO */
+/* =========================
+   HERO (PREMIUM FUSION SYSTEM)
+========================= */
+
 .hero{
 height:100vh;
-background:url("images/luxury-building-night.jpg") center/cover no-repeat;
 position:relative;
 display:flex;
 align-items:center;
+overflow:hidden;
+background:#08111f;
+isolation:isolate;
 }
 
-.hero-overlay{
+/* IMAGE LAYER */
+.hero::before{
+content:"";
 position:absolute;
 inset:0;
-background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.45));
+background:url("images/luxury-building-night.jpg") center/cover no-repeat;
+transform:scale(1.05);
+filter:brightness(0.85) contrast(1.1);
+z-index:0;
+
+/* soft blend */
+mask-image:linear-gradient(
+to right,
+rgba(0,0,0,1) 55%,
+rgba(0,0,0,0.2) 80%,
+transparent 100%
+);
+
+-webkit-mask-image:linear-gradient(
+to right,
+rgba(0,0,0,1) 55%,
+rgba(0,0,0,0.2) 80%,
+transparent 100%
+);
+}
+
+/* GRADIENT FUSION LAYER */
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(
+90deg,
+rgba(8,17,31,0.98) 0%,
+rgba(8,17,31,0.75) 35%,
+rgba(8,17,31,0.35) 65%,
+rgba(8,17,31,0.15) 100%
+);
 z-index:1;
 }
 
+/* CONTENT */
 .hero-content{
 position:relative;
 z-index:2;
@@ -200,9 +239,7 @@ opacity:0.85;
 background:url("images/modern-building-day.jpg") center center;
 background-size:cover;
 background-repeat:no-repeat;
-
 min-height:750px;
-
 filter:contrast(1.05) brightness(0.95);
 }
 

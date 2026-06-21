@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Devam Eden Projeler | Emanova Group</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<section class="page project-page">
+
+<h1>DEVAM EDEN PROJELER</h1>
+
+<div class="grid">
+  <a class="card" href="novalife-bakirli.html">
+    <img src="images/modern-building-day.jpg" alt="NovaLife Bakirli projesi">
+    <h3>NovaLife Bak&#305;rl&#305;</h3>
+  </a>
+</div>
+
+<a href="index.html#projects" class="back-home">&#8592; Projelere D&#246;n</a>
+
+</section>
+
+<script>
+fetch("navbar.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("navbar").innerHTML = d);
+</script>
+
+</body>
+</html>

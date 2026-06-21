@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NovaLife Bak&#305;rl&#305; | Emanova Group</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<section class="page project-detail">
+
+<span class="tag">DEVAM EDEN PROJE</span>
+<h1>NOVALIFE BAKIRLI</h1>
+
+<img src="images/modern-building-day.jpg" alt="NovaLife Bakirli projesi">
+
+<p>
+NovaLife Bak&#305;rl&#305;, Emanova Group'un modern ya&#351;am alanlar&#305; vizyonuyla geli&#351;tirdi&#287;i devam eden projelerden biridir.
+</p>
+
+<p>
+Proje geli&#351;imi, teknik detaylar ve sat&#305;&#351; bilgileri bu sayfada ayr&#305;ca sunulabilir.
+</p>
+
+<a href="index.html#projects" class="back-home">&#8592; Projelere D&#246;n</a>
+
+</section>
+
+<script>
+fetch("navbar.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("navbar").innerHTML = d);
+</script>
+
+</body>
+</html>

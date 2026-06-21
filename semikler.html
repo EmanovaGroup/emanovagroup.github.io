@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>&#350;emikler | Emanova Group</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<section class="page project-detail">
+
+<span class="tag">TAMAMLANAN PROJE</span>
+<h1>&#350;EM&#304;KLER</h1>
+
+<img src="images/luxury-building-night.jpg" alt="Semikler projesi">
+
+<p>
+&#350;emikler projesi, modern mimari anlay&#305;&#351;&#305;n&#305; kaliteli ya&#351;am alanlar&#305;yla birle&#351;tiren tamamlanm&#305;&#351; Emanova Group projelerindendir.
+</p>
+
+<p>
+Detayl&#305; proje bilgileri, teslim durumu ve g&#246;rsel i&#231;erikler bu sayfada geni&#351;letilebilir.
+</p>
+
+<a href="index.html#projects" class="back-home">&#8592; Projelere D&#246;n</a>
+
+</section>
+
+<script>
+fetch("navbar.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("navbar").innerHTML = d);
+</script>
+
+</body>
+</html>

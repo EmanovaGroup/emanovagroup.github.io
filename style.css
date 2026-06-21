@@ -197,10 +197,14 @@ opacity:0.85;
 }
 
 .about-right{
-background:url("images/modern-building-day.jpg") center/cover no-repeat;
+background:url("images/modern-building-day.jpg") center center;
+background-size:cover;
+background-repeat:no-repeat;
+
+min-height:750px;
+
 filter:contrast(1.05) brightness(0.95);
 }
-
 /* STATS */
 .stats{
 display:grid;

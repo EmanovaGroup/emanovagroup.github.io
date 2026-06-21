@@ -259,6 +259,28 @@ color:#c9a15f;
 padding:120px 80px;
 }
 
+.project-links{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+margin:20px 0 45px;
+}
+
+.project-links a{
+display:inline-block;
+padding:12px 22px;
+border:1px solid rgba(201,161,95,0.45);
+color:#c9a15f;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.project-links a:hover{
+background:#c9a15f;
+color:#000;
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -269,6 +291,7 @@ gap:35px;
 overflow:hidden;
 border-radius:14px;
 transition:.4s;
+scroll-margin-top:120px;
 }
 
 .card:hover{
@@ -285,6 +308,16 @@ transition:.5s;
 
 .card:hover img{
 transform:scale(1.05);
+}
+
+.project-status{
+display:inline-block;
+margin-top:18px;
+color:#c9a15f;
+font-size:12px;
+font-weight:600;
+letter-spacing:2px;
+text-transform:uppercase;
 }
 
 /* CONTACT */

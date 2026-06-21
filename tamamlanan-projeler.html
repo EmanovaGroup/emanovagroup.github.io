@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tamamlanan Projeler | Emanova Group</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div id="navbar"></div>
+
+<section class="page project-page">
+
+<h1>TAMAMLANAN PROJELER</h1>
+
+<div class="grid">
+  <a class="card" href="semikler.html">
+    <img src="images/luxury-building-night.jpg" alt="Semikler projesi">
+    <h3>&#350;emikler</h3>
+  </a>
+</div>
+
+<a href="index.html#projects" class="back-home">&#8592; Projelere D&#246;n</a>
+
+</section>
+
+<script>
+fetch("navbar.html")
+  .then(r => r.text())
+  .then(d => document.getElementById("navbar").innerHTML = d);
+</script>
+
+</body>
+</html>

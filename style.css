@@ -205,6 +205,41 @@ min-height:750px;
 
 filter:contrast(1.05) brightness(0.95);
 }
+
+/* INNER PAGES */
+.page{
+min-height:100vh;
+max-width:900px;
+margin:0 auto;
+padding:160px 40px 90px;
+}
+
+.page h1{
+font-family:'Cormorant Garamond',serif;
+font-size:64px;
+line-height:1.05;
+margin-bottom:30px;
+color:#c9a15f;
+}
+
+.page p{
+font-size:18px;
+opacity:.86;
+margin-bottom:20px;
+}
+
+.back-home{
+display:inline-block;
+margin-top:25px;
+color:#c9a15f;
+text-decoration:none;
+font-weight:600;
+}
+
+.back-home:hover{
+color:white;
+}
+
 /* STATS */
 .stats{
 display:grid;

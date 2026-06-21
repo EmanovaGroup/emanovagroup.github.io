@@ -33,7 +33,14 @@
       </div>
     </div>
 
-    <a href="#projects">Projeler</a>
+    <div class="dropdown">
+      <a href="#projects" class="dropbtn">Projeler &#9662;</a>
+
+      <div class="dropdown-content">
+        <a href="#completed-projects">Tamamlanan Projeler</a>
+        <a href="#ongoing-projects">Devam Eden Projeler</a>
+      </div>
+    </div>
     <a href="#contact">İletişim</a>
 
   </nav>
@@ -106,15 +113,22 @@
     <h2>PROJELER</h2>
   </div>
 
+  <div class="project-links reveal">
+    <a href="#completed-projects">Tamamlanan Projeler</a>
+    <a href="#ongoing-projects">Devam Eden Projeler</a>
+  </div>
+
   <div class="grid">
 
-    <div class="card reveal">
+    <div class="card reveal" id="completed-projects">
       <img src="images/luxury-building-night.jpg">
+      <span class="project-status">Tamamlanan Proje</span>
       <h3>Şemikler</h3>
     </div>
 
-    <div class="card reveal">
+    <div class="card reveal" id="ongoing-projects">
       <img src="images/modern-building-day.jpg">
+      <span class="project-status">Devam Eden Proje</span>
       <h3>NovaLife Bakırlı</h3>
     </div>
 
